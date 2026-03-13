@@ -400,7 +400,10 @@ begin
     Exit;
 
   if MessageDlg('Deseja excluir o item selecionado?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
     mtItens.Delete;
+    RecalcularTotal;
+  end;
 end;
 
 procedure TfrmPedido.grdItensKeyDown(Sender: TObject; var Key: Word;
