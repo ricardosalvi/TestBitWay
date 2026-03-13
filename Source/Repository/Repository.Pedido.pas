@@ -44,6 +44,7 @@ begin
     LQuery.ParamByName('pDataEmissao').AsDate       := APedido.DataEmissao;
     LQuery.ParamByName('pCodigoCliente').AsInteger  := APedido.CodigoCliente;
     LQuery.ParamByName('pValorTotal').AsCurrency    := APedido.ValorTotal;
+    LQuery.ParamByName('pObservacao').AsString      := APedido.Observacao;
     LQuery.ExecSQL;
 
     LQuery.Close;
