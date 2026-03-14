@@ -1,6 +1,9 @@
-/*=============================================================================
-   CASA CONSTRUTOR - BANCO DE DADOS FIREBIRD
-=============================================================================*/
+CREATE DATABASE '<Caminho_Completo_do_Banco>'
+USER 'SYSDBA' PASSWORD 'masterkey'
+PAGE_SIZE 8192
+DEFAULT CHARACTER SET WIN1252;
+
+COMMIT;
 
 /* GENERATORS */
 CREATE GENERATOR GEN_PEDIDO;
@@ -76,30 +79,30 @@ SET TERM ; ^
 
 /* DADOS INICIAIS */
 
-INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (1,  'Construtora Horizonte Ltda',      'SÃ£o Paulo',        'SP');
+INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (1,  'Construtora Horizonte Ltda',      'São Paulo',        'SP');
 INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (2,  'Obras e Reformas Brasil S/A',      'Rio de Janeiro',   'RJ');
 INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (3,  'Empreiteira Norte Superior',       'Manaus',           'AM');
-INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (4,  'Engenharia Planalto Ltda',         'BrasÃ­lia',         'DF');
+INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (4,  'Engenharia Planalto Ltda',         'Brasília',         'DF');
 INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (5,  'Construtora Sol Nascente',         'Salvador',         'BA');
 INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (6,  'Reformas e Acabamentos Curitiba',  'Curitiba',         'PR');
-INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (7,  'HabitaÃ§Ã£o Popular do Sul Ltda',    'Porto Alegre',     'RS');
-INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (8,  'Centro-Oeste ConstruÃ§Ãµes ME',      'GoiÃ¢nia',          'GO');
-INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (9,  'Litoral Empreendimentos Ltda',     'FlorianÃ³polis',    'SC');
+INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (7,  'Habitação Popular do Sul Ltda',    'Porto Alegre',     'RS');
+INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (8,  'Centro-Oeste Construções ME',      'Goiânia',          'GO');
+INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (9,  'Litoral Empreendimentos Ltda',     'Florianópolis',    'SC');
 INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (10, 'Nordeste Engenharia e Projetos',   'Recife',           'PE');
-INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (11, 'ArteCasa ConstruÃ§Ãµes',             'Belo Horizonte',   'MG');
-INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (12, 'SertÃ£o Forte Obras Ltda',         'Fortaleza',        'CE');
+INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (11, 'ArteCasa Construções',             'Belo Horizonte',   'MG');
+INSERT INTO CLIENTE (CODIGO, NOME, CIDADE, UF) VALUES (12, 'Sertão Forte Obras Ltda',         'Fortaleza',        'CE');
 
 INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (1,  'Cimento CP-II 50kg',                    35.90);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (2,  'Tijolo CerÃ¢mico 9 Furos (unidade)',      0.85);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (3,  'Areia MÃ©dia (mÂ³)',                      120.00);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (4,  'Brita NÂº 1 (mÂ³)',                       145.00);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (5,  'Ferro CA-50 Ã˜10mm (barra 12m)',          62.50);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (6,  'Telha CerÃ¢mica Colonial (unidade)',       4.20);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (7,  'Tinta LÃ¡tex Premium 18L',               189.90);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (8,  'Piso CerÃ¢mico 60x60 (mÂ²)',               75.00);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (2,  'Tijolo Cerâmico 9 Furos (unidade)',      0.85);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (3,  'Areia Média (m³)',                      120.00);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (4,  'Brita Nº 1 (m³)',                       145.00);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (5,  'Ferro CA-50 Ø10mm (barra 12m)',          62.50);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (6,  'Telha Cerâmica Colonial (unidade)',       4.20);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (7,  'Tinta Látex Premium 18L',               189.90);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (8,  'Piso Cerâmico 60x60 (m²)',               75.00);
 INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (9,  'Tubo PVC Esgoto 100mm (6m)',              48.00);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (10, 'Cabo ElÃ©trico 2,5mm (rolo 100m)',       320.00);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (10, 'Cabo Elétrico 2,5mm (rolo 100m)',       320.00);
 INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (11, 'Argamassa Colante ACIII 20kg',           28.50);
-INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (12, 'Porta de Madeira MaciÃ§a 80x210cm',      650.00);
+INSERT INTO PRODUTO (CODIGO, DESCRICAO, PRECO_VENDA) VALUES (12, 'Porta de Madeira Maciça 80x210cm',      650.00);
 
 COMMIT;
