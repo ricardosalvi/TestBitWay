@@ -322,6 +322,13 @@ object frmPedido: TfrmPedido
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
+    object lblObservacao: TLabel
+      Left = 8
+      Top = 8
+      Width = 73
+      Height = 17
+      Caption = 'Observa'#231#227'o:'
+    end
     object lblTotalLabel: TLabel
       Left = 740
       Top = 28
@@ -348,13 +355,22 @@ object frmPedido: TfrmPedido
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object memObservacao: TMemo
+      Left = 8
+      Top = 28
+      Width = 700
+      Height = 110
+      MaxLength = 500
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
     object btnNovo: TButton
       Left = 740
       Top = 95
       Width = 120
       Height = 36
       Caption = 'Novo Pedido'
-      TabOrder = 0
+      TabOrder = 1
       OnClick = btnNovoClick
     end
     object btnGravar: TButton
@@ -370,7 +386,7 @@ object frmPedido: TfrmPedido
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 2
       OnClick = btnGravarClick
     end
   end

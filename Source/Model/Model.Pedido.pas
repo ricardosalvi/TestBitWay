@@ -13,6 +13,7 @@ type
     FDataEmissao: TDate;
     FCodigoCliente: Integer;
     FValorTotal: Currency;
+    FObservacao: string;
     FItens: TObjectList<TPedidoItem>;
   public
     constructor Create;
@@ -22,6 +23,7 @@ type
     property DataEmissao   : TDate                 read FDataEmissao   write FDataEmissao;
     property CodigoCliente : Integer               read FCodigoCliente write FCodigoCliente;
     property ValorTotal    : Currency              read FValorTotal    write FValorTotal;
+    property Observacao    : string                read FObservacao    write FObservacao;
     property Itens         : TObjectList<TPedidoItem> read FItens;
   end;
 

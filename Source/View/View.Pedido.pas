@@ -75,6 +75,9 @@ type
     mtItensQuantidade: TFloatField;
     mtItensVlrUnitario: TCurrencyField;
     mtItensVlrTotal: TCurrencyField;
+
+    lblObservacao: TLabel;
+    memObservacao: TMemo;
     lblTotalLabel: TLabel;
     lblTotal: TLabel;
 
@@ -170,6 +173,7 @@ begin
   LimparCamposCliente;
   LimparCamposItem;
   mtItens.EmptyDataSet;
+  memObservacao.Clear;
   lblTotal.Caption := 'R$ 0,00';
 end;
 
@@ -396,7 +400,10 @@ begin
     Exit;
 
   if MessageDlg('Deseja excluir o item selecionado?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
     mtItens.Delete;
+    RecalcularTotal;
+  end;
 end;
 
 procedure TfrmPedido.grdItensKeyDown(Sender: TObject; var Key: Word;
@@ -446,6 +453,7 @@ begin
   try
     LPedido.DataEmissao   := Now;
     LPedido.CodigoCliente := FClienteAtual.Codigo;
+    LPedido.Observacao    := Trim(memObservacao.Text);
 
     mtItens.First;
     while not mtItens.Eof do
